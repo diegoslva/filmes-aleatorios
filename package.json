@@ -1,7 +1,7 @@
 {
   "name": "filmes-aleatorios",
   "version": "1.0.0",
-  "description": "My super-excellent Nuxt.js project",
+  "description": "Sugestões de filmes. Com botão aleatorio para voce focar no que realmente importa. Assistir o filme e não passar horas de titulo em titulo e no final não escolher nada para assistir",
   "author": "Diego silva",
   "private": true,
   "scripts": {

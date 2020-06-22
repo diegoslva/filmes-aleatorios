@@ -1,6 +1,6 @@
 <template>
   <div class="logo-site">
-    <svg xmlns="http://www.w3.org/2000/svg" id="camera-loader" width="85.708488" height="100">
+    <svg xmlns="https://www.w3.org/2000/svg" id="camera-loader" width="85.708488" height="100">
       <defs id="defs12" />
       <path
         id="camera-body"
