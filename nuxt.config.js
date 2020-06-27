@@ -18,7 +18,7 @@ export default {
       { property: "og:type", content:"website" },
       { property: "og:title", content:"Sugestões filmes aleatorios" },
       { property: "og:url", content:"http://sugestoesfilmes.com.br/" },
-      { property: "og:site_name", content:"Agência Renove" }
+      { property: "og:site_name", content:"Sugestões Filmes" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
