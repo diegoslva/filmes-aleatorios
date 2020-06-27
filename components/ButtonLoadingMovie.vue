@@ -41,6 +41,8 @@ export default {
 
       this.results = data.results;
       this.SelectTheMovie(this.results);
+
+      window.scrollTo(0, 0);
     },
 
     SelectTheMovie(list) {

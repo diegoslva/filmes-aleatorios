@@ -15,7 +15,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #130b1a;
+  background-color: #080808;
+  /* background-color: #130b1a; */
   color: white;
 }
 
@@ -62,10 +63,16 @@ a {
 
 .container {
   width: 100%;
-  padding-right: 55px;
-  padding-left: 55px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
+}
+@media (max-width: 1200) {
+  .container {
+    padding-right: 55px;
+    padding-left: 55px;
+  }
 }
 
 .btn-primary {

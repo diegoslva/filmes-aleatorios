@@ -7,7 +7,7 @@
     <div class="featured-movie-wrapper">
       <div class="featured-movie">
         <figure class="featured-movie__image">
-          <img :src="getPoster(item.poster_path)" alt />
+          <img width="180" height="275" :src="getPoster(item.poster_path)" alt />
         </figure>
 
         <div class="featured-movie__content">
@@ -29,6 +29,20 @@
           </div>
           <div class="featured-movie__description">
             <p>{{item.overview}}</p>
+          </div>
+
+          <div class="featured-movie__networking">
+            <div class="featured-movie__networking__heading">
+              <small>Alguns titulos podem não estar disponível na plataforma escolhida</small>
+            </div>
+
+            <a v-bind:href="browserNetflix(item.title)" target="_blank">
+              <img src="netflix.svg" alt="netflix" />
+            </a>
+            <a v-bind:href="browserPrimeVideo(item.title)" target="_blank">
+              <img src="amazon_prime.svg" alt="netflix" />
+            </a>
+            <a v-bind:href="browserVizer(item.title)" target="_blank">Vizer.tv</a>
           </div>
 
           <!-- <div class="featured-movie__provider">
@@ -75,6 +89,21 @@ export default {
     },
     getCover(image) {
       return `url(https://image.tmdb.org/t/p/original/${image})`;
+    },
+    browserNetflix(title) {
+      // if (!title) return;
+      // const titleFormated = title.replace(/\s+/g, "%20");
+      return `https://www.netflix.com/search?q=${title}`;
+    },
+    browserPrimeVideo(title) {
+      // if (!title) return;
+      // const titleFormated = title.replace(/\s+/g, "%20");
+      return `https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${title}`;
+    },
+    browserVizer(title) {
+      // if (!title) return;
+      // const titleFormated = title.replace(/\s+/g, "%20");
+      return `https://vizer.tv/pesquisar/${title}`;
     }
   }
 };
@@ -87,32 +116,40 @@ export default {
 <style lang='sass'>
 .featured-movie-wrapper
   display: grid
-  grid-template-columns: minmax(14rem, 2fr) 1fr
-  height: 80vh
+
   position: relative
-  max-width: 85%
+  max-width: 95%
   z-index: 5
   margin: 0 auto
   .btn-primary
     margin: 0 auto
+  @media(min-width: 1200px)
+    grid-template-columns: minmax(14rem, 2fr) 1fr
+    max-width: 85%
+    height: 80vh
 
 .featured-movie
   display: grid
-  grid-template-columns: 1fr 2fr
   align-content: center
+  @media(min-width: 1200px)
+    grid-template-columns: 1fr 2fr
   &__content
     padding-left: 20px
   &__image
     max-width: 230px
     margin: 0 auto
+    @media(max-width: 600px)
+      max-width: 180px
+
     img
       border-radius: 5px
       width: 100%
       height: auto
   &__tite
-    font-size: 2.5em
+    font-size: #{'min(2.5em, 9vw)'}
     font-weight: 700
     margin-bottom: 10px
+
   &__review
     margin: 20px 0
   &__description
@@ -122,6 +159,11 @@ export default {
     color: #bcbabd
     line-height: 24px
     margin-top: 20px
+    display: -webkit-box
+    -webkit-line-clamp: 6
+    -webkit-box-orient: vertical
+    overflow: hidden
+
   &__provider
     margin-top: 20px
     display: flex
@@ -144,6 +186,17 @@ export default {
       border-radius: 2px
       margin-right: 7px
       font-size: 15px
+  &__networking
+    margin-top: 20px
+    padding-top: 10px
+    border-top: 1px solid #232323
+    small
+      font-size: 13px
+      color: #616161
+      margin-bottom: 15px
+      display: block
+    img
+      width: 50px
 
 .column
   display: flex
@@ -151,6 +204,9 @@ export default {
   align-items: center
   align-content: center
   text-align: center
+
+  @media(max-width: 600px)
+    margin-top: 2em
 
 .featured-movie__cover
 

@@ -10,7 +10,15 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { name: 'google-site-verification', content: 'l7ZYTbQapWyJOwUOxkkh-RoSqVrnGafUw4qhRRrq23Y' }
+      { name: 'google-site-verification', content: 'l7ZYTbQapWyJOwUOxkkh-RoSqVrnGafUw4qhRRrq23Y' },{ name:'robots',  content:"index, follow" },
+      { name: "viewport", content:"width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "author", content:"Diego silva, Desenvolvedor front end" },
+      { name: "language", content:"Portuguese" },
+      { property: "og:locale", content:"pt_BR" },
+      { property: "og:type", content:"website" },
+      { property: "og:title", content:"Sugestões filmes aleatorios" },
+      { property: "og:url", content:"http://sugestoesfilmes.com.br/" },
+      { property: "og:site_name", content:"Agência Renove" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

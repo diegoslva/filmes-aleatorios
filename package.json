@@ -1,7 +1,7 @@
 {
   "name": "filmes-aleatorios",
   "version": "1.0.0",
-  "description": "Sugestões de filmes. Com botão aleatorio para voce focar no que realmente importa. Assistir o filme e não passar horas de titulo em titulo e no final não escolher nada para assistir",
+  "description": "Sugestões de filmes para assistir. Clique no botão para sugerir filmes na netflix, amazon prime, de comedia, ação, suspens, terror entre outros",
   "author": "Diego silva",
   "private": true,
   "scripts": {

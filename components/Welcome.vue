@@ -1,5 +1,5 @@
 <template>
-  <div style="overflow: hidden; height: 100vh;background-color: #080808;">
+  <div style="height: 100vh;background-color: #080808;">
     <Loading @loading="getStateLoading()" v-show="state.isLoading" />
 
     <MainMovie v-show="!state.isLoading && state.isMovie" :item="data.movie">
@@ -64,17 +64,20 @@ export default {
   justify-content: center
   align-items: center
   height: 90vh
+  text-align: center
 
 .welcome
   &__content
-    width: 50%
+    padding: 0 15px
+    @media(min-width: 1000px)
+      width: 50%
+    .btn-primary
+      margin: 30px auto auto
   &__title
-    font-size: 2.3em
+    font-size: #{'min(2.5em, 9vw)'}
     font-weight: 600
-    line-height: 43px
-    max-width: 480px
   &__description
-    font-size: 19px
+    font-size: #{'min(1.2em, 5vw)'}
     margin: 22px 0
     color: #9383a1
 
