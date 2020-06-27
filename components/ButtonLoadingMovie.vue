@@ -17,7 +17,7 @@ export default {
       results: [],
       movie: [],
       params: {
-        url: `discover/movie/?${this.$API_LANG}&certification_country=BR`,
+        url: `discover/movie?${this.$API_LANG}&certification_country=BR`,
         network: 213,
         sort_by: "sort_by=populatiry.asc",
         vote_count: "vote_count.gte=50",
